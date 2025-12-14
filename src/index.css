@@ -66,17 +66,70 @@ h3 {
 }
 
 .selectWorks {
-  width: 60px;
-  margin-right: 1rem;
   border-bottom: 1px solid var(--accent-color);
   color: var(--accent-color);
   font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
 }
 
 .unselectWorks {
-  width: 60px;
-  margin-right: 1rem;
-  border-bottom: 1px solid var(--text-secondary);
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: 1.15rem;
+  font-weight: 400;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.unselectWorks:hover {
+  color: var(--text-color);
+  opacity: 1;
+}
+
+.menu-button-box {
+  display: inline-grid;
+  height: 2.5rem;
+  /* Ensure consistent height container */
+  align-items: center;
+  /* Vertical center */
+  position: relative;
+}
+
+.menu-button-box:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.menu-button-box:not(:first-child) {
+  margin-left: 1.5rem;
+}
+
+/* Vertical Separator */
+.menu-button-box:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  right: -1.5rem;
+  /* center the separator in the gap */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1.2rem;
+  width: 1px;
+  background-color: var(--text-secondary);
+  opacity: 0.3;
+}
+
+.menu-button-box::after {
+  content: attr(data-text);
+  font-size: 1.5rem;
+  font-weight: 500;
+  visibility: hidden;
+  grid-area: 1 / 1;
+  padding-bottom: 2px;
+}
+
+.menu-button-box>a {
+  grid-area: 1 / 1;
+  place-self: center;
+  white-space: nowrap;
 }

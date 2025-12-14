@@ -2,12 +2,13 @@ import WorkMenu from "./WorkMenu";
 import Works from "./Works";
 import { useState } from "react";
 import { motion } from "framer-motion";
+
 export default function Tech() {
     const worktype = ["All", "Web", "Native", "Others"];
     const [selected_worktype, setWorksType] = useState(worktype[0]);
     return (
         <motion.main initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} transition={{ duration: 0.5 }} className="container" style={{ flex: 1, paddingTop: '4rem', paddingBottom: '4rem' }}>
-            <section id="about" style={{ marginBottom: '6rem', position: 'relative', height: '150px' }}>
+            <section id="about" style={{ marginBottom: '6rem', position: 'relative', height: '150px', scrollMarginTop: 'var(--nav-height)' }}>
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'var(--bg-color)', zIndex: -1 }}>
                     <img src="" alt="" />
                 </div>
@@ -21,7 +22,7 @@ export default function Tech() {
                 </p>
             </section>
 
-            <section id="works">
+            <section id="works" style={{ scrollMarginTop: 'var(--nav-height)' }}>
                 <WorkMenu worktype={worktype} setWorksType={setWorksType} selected_worktype={selected_worktype} />
                 <div style={{ display: 'grid', gap: '2rem' }}>
                     <Works worktype={selected_worktype} />

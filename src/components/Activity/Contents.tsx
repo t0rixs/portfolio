@@ -25,6 +25,6 @@ export class Content {
 }
 
 export const contents = [
-    new Content("Tapaz", "学生の視点を用いて経営者と新しい価値を提案する事業活動", new Date(2024, 11, 11), ["Business"], "Note", "https://note.com/tapaz", "src/assets/img/tapaz_work.jpg", 0.6, <div></div>),
-    new Content("DCON", "介護業界の業務の質を向上させるサービス提供活動", new Date(2025, 10, 25), ["Activity", "Business"], null, null, "src/assets/img/dcon_mtg.jpg", 0.8, <div></div>),
+    new Content("Tapaz", "学生の視点を用いて経営者と新しい価値を提案する事業活動", new Date(2024, 11, 11), ["Business"], "Note", "https://note.com/tapaz", `${import.meta.env.BASE_URL}img/tapaz_work.jpg`, 0.6, <div></div>),
+    new Content("DCON", "介護業界の業務の質を向上させるサービス提供活動", new Date(2025, 10, 25), ["Activity", "Business"], null, null, `${import.meta.env.BASE_URL}img/dcon_mtg.jpg`, 0.8, <div></div>),
 ]

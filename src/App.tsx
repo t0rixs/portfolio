@@ -31,12 +31,18 @@ function AnimatedRoutes() {
     </AnimatePresence>
   );
 }
+function HeaderRoutes() {
+  const location = useLocation();
+  return (
+    <Header location={location.pathname} />
+  )
+}
 
 /* App は Router の殻だけ */
 export default function App() {
   return (
     <HashRouter>
-      <Header />
+      <HeaderRoutes />
       <AnimatedRoutes />
       <Footer />
     </HashRouter>

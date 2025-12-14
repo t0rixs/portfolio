@@ -21,7 +21,7 @@ export default function Works({ worktype }: { worktype: string }) {
                 <div style={{
                     position: 'absolute', top: 0, right: 0, width: '60%', height: '100%', justifyContent: 'right', zIndex: 0, overflow: 'hidden', borderRadius: '8px',
                 }}>
-                    <img src={work.img} alt={work.title} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px', filter: `brightness(${work.img_brt})` }} />
+                    <img src={work.img} alt={work.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: work.img_pos, borderRadius: '8px', filter: `brightness(${work.img_brt})` }} />
                     <div
                         style={{
                             position: "absolute",

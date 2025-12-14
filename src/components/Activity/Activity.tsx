@@ -9,7 +9,7 @@ export default function Activity() {
     const setActType = (actType: string) => setSelected_acttype(actType);
     return (
         <motion.main className="container" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} transition={{ duration: 0.5 }} style={{ flex: 1, paddingTop: '4rem', paddingBottom: '4rem' }}>
-            <section id="about" style={{ marginBottom: '6rem', position: 'relative', height: '150px' }}>
+            <section id="about" style={{ marginBottom: '6rem', position: 'relative', height: '150px', scrollMarginTop: 'var(--nav-height)' }}>
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'var(--bg-color)', zIndex: -1 }}>
                     <img src="" alt="" />
                 </div>
@@ -21,7 +21,7 @@ export default function Activity() {
                 </p>
             </section>
 
-            <section id="works">
+            <section id="acts" style={{ scrollMarginTop: 'var(--nav-height)' }}>
                 <ActMenu acttype={acttype} setActType={setActType} selected_acttype={selected_acttype} />
                 <div style={{ display: 'grid', gap: '2rem' }}>
                     <Acts acttype={selected_acttype} />
