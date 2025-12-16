@@ -1,15 +1,17 @@
-import { contents } from "./Contents";
-export default function Works({ worktype }: { worktype: string }) {
-    let work;
+import { contents, Content } from "./Contents";
+
+export default function Works({ worktype, setDetailWork }: { worktype: string, setDetailWork: (work: Content | null) => void }) {
+    let works;
     if (worktype === "All") {
-        work = contents;
+        works = contents;
     } else {
-        work = contents.filter((content) => content.tag.includes(worktype));
+        works = contents.filter((content) => content.tag.includes(worktype));
     }
 
+
     return (
-        work.map((work) => (
-            <div style={{ position: 'relative', height: '150px' }}>
+        works.map((work) => (
+            <div style={{ position: 'relative', height: '150px' }} onClick={(e) => { if (e.metaKey || e.ctrlKey) window.open(work.url, '_blank'); else setDetailWork(work); }}>
                 <div style={{ position: 'relative', paddingLeft: '2rem', paddingBottom: '1rem', border: '1px solid rgba(128,128,128,0.2)', borderRadius: '8px', zIndex: 2, height: '150px' }}>
 
                     <h4 style={{ marginBottom: '0.5rem', fontSize: '1.6rem' }}>{work.title}</h4>
