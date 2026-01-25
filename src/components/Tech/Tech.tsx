@@ -1,6 +1,6 @@
 import WorkMenu from "./WorkMenu";
 import Works from "./Works";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Content } from "../shared/Contents";
 import Detail from "../shared/Details";
@@ -13,6 +13,14 @@ export default function Tech() {
     const worktype = ["All", "Web", "Native", "Others"];
     const [selected_worktype, setWorksType] = useState(worktype[0]);
     const [detailWork, setDetailWork] = useState<Content | null>(null);
+
+    useEffect(() => {
+        if (detailWork) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [detailWork]);
 
     return (
         <>
