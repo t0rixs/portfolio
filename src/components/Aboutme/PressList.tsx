@@ -43,7 +43,7 @@ export default function PressList() {
                                     fontFamily: 'monospace',
                                     marginTop: '0.2rem'
                                 }}>
-                                    {item.create_at.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+                                    {`${item.create_at.getFullYear()}年${item.create_at.getMonth()}月${item.create_at.getDate()}日`}
                                 </span>
 
                                 <h4 style={{
