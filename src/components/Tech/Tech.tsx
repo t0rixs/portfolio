@@ -45,13 +45,19 @@ export default function Tech() {
 
                     </div>
                 </section>
-                <div style={{ marginBottom: '4rem' }}>
+                <div style={{ marginBottom: '4rem', flexWrap: 'wrap' }}>
                     <h2 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: '200', letterSpacing: '0.1em' }}>
                         <span style={{ borderBottom: '1px solid #fff', paddingBottom: '0.5rem' }}>Tech Stack</span>
                     </h2>
-                    <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '1rem' }}>
-                        <img src="https://skillicons.dev/icons?i=flutter,react" alt="Tech icons" style={{ margin: '0 1rem' }} />
-                        <img src="https://skillicons.dev/icons?i=c,html,css,js,typescript,dart" alt="Tech icons" />
+                    <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '1rem', maxWidth: '100%', height: 'auto', flexWrap: 'wrap' }}>
+                        <img src="https://skillicons.dev/icons?i=flutter" alt="Tech icons" style={{ marginRight: '0.2rem' }} />
+                        <img src="https://skillicons.dev/icons?i=react" alt="Tech icons" style={{ marginRight: '0.4rem' }} />
+                        <img src="https://skillicons.dev/icons?i=c" alt="Tech icons" style={{ marginRight: '0.2rem' }} />
+                        <img src="https://skillicons.dev/icons?i=html" alt="Tech icons" style={{ marginRight: '0.2rem' }} />
+                        <img src="https://skillicons.dev/icons?i=css" alt="Tech icons" style={{ marginRight: '0.2rem' }} />
+                        <img src="https://skillicons.dev/icons?i=js" alt="Tech icons" style={{ marginRight: '0.2rem' }} />
+                        <img src="https://skillicons.dev/icons?i=typescript" alt="Tech icons" style={{ marginRight: '0.2rem' }} />
+                        <img src="https://skillicons.dev/icons?i=dart" alt="Tech icons" style={{ marginRight: '0.2rem' }} />
                     </div>
 
                 </div >

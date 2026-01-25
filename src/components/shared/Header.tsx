@@ -23,18 +23,24 @@ export default function Header({ location, style }: { location: string, style?: 
             ...style
         }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                {location === "/" ? (
-                    <img src={`${import.meta.env.BASE_URL}img/logo/MIYANO_WH.svg`} alt="" style={{ height: 'calc(var(--nav-height) /3)', objectFit: 'contain' }} />
-                ) : (
-                    <div style={{ height: 'calc(var(--nav-height) /3)', objectFit: 'contain' }} />
-                )}
+                <div onClick={() => navigate("/")} style={{ cursor: 'pointer' }}>
+                    {location === "/" ? (
+                        <img src={`${import.meta.env.BASE_URL}img/logo/MIYANO_WH.svg`} alt="" style={{ height: 'calc(var(--nav-height) /3)', objectFit: 'contain' }} />
+                    ) : (
+                        <img src={`${import.meta.env.BASE_URL}img/logo/MIYANO_WH.svg`} alt="" className="show-below-528" style={{ height: 'calc(var(--nav-height) /3)', objectFit: 'contain' }} />
+                    )}
+                </div>
                 <nav style={{ display: 'flex', gap: '1.5rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
                     {navItems.map((item) => {
                         const isActive = location === item.path;
+                        // Hide About on mobile
+                        const className = item.label === "About" ? "hide-below-528" : "";
+
                         return (
                             <a
                                 key={item.path}
                                 onClick={() => { navigate(item.path) }}
+                                className={className}
                                 style={{
                                     cursor: 'pointer',
                                     position: 'relative',

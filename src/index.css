@@ -189,3 +189,9 @@ h3 {
     display: none !important;
   }
 }
+
+@media (min-width: 528px) {
+  .show-below-528 {
+    display: none !important;
+  }
+}
