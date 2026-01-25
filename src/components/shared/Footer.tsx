@@ -17,7 +17,7 @@ export default function Footer() {
                 {/* Contact Info */}
 
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
-                    <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-primary)' }}>Contact</h2>
+                    <h2 style={{ fontSize: '1.5rem', fontWeight: '200', color: 'var(--text-primary)' }}>Contact</h2>
 
                     <div style={{ display: 'flex', gap: '1.5rem' }}>
                         <a onClick={() => { navigate("/contact") }} target="_blank" style={{ transition: 'opacity 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'} onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}>

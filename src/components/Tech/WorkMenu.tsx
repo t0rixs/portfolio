@@ -7,7 +7,7 @@ export default function WorkMenu({ worktype, setWorksType, selected_worktype }: 
 
     return (
         <div>
-            <nav style={{ fontSize: '1.5rem', marginBottom: '2rem', paddingBottom: '0.5rem', display: 'inline-block' }}>
+            <nav style={{ fontSize: '1.5rem', marginBottom: '2rem', paddingBottom: '0.5rem', display: 'inline-block', fontWeight: '200' }}>
                 {worktype.map((wt: string) => {
                     return (
                         <div className="menu-button-box" data-text={wt}>

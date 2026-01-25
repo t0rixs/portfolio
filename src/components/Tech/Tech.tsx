@@ -46,11 +46,14 @@ export default function Tech() {
                     </div>
                 </section>
                 <div style={{ marginBottom: '4rem' }}>
-                    <h1 style={{ textAlign: 'start', marginBottom: '1rem' }}>Tech Stack</h1>
+                    <h2 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: '200', letterSpacing: '0.1em' }}>
+                        <span style={{ borderBottom: '1px solid #fff', paddingBottom: '0.5rem' }}>Tech Stack</span>
+                    </h2>
                     <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '1rem' }}>
                         <img src="https://skillicons.dev/icons?i=flutter,react" alt="Tech icons" style={{ margin: '0 1rem' }} />
                         <img src="https://skillicons.dev/icons?i=c,html,css,js,typescript,dart" alt="Tech icons" />
                     </div>
+
                 </div >
                 <section id="works" style={{ scrollMarginTop: 'var(--nav-height)' }}>
                     <WorkMenu worktype={worktype} setWorksType={setWorksType} selected_worktype={selected_worktype} />
@@ -58,7 +61,7 @@ export default function Tech() {
                         <Works worktype={selected_worktype} setDetailWork={setDetailWork} />
                     </div>
                 </section>
-            </motion.main>
+            </motion.main >
             {
                 detailWork && (
                     <section className="detail" onClick={() => setDetailWork(null)} style={{ scrollMarginTop: 'var(--nav-height)' }}>

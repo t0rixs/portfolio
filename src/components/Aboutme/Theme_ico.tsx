@@ -56,10 +56,11 @@ export default function Theme_ico({
                 <h3
                     style={{
                         fontSize: "2rem",
-                        fontWeight: "700",
+                        fontWeight: "200",
                         marginBottom: "0.5rem",
                         letterSpacing: "0.05em",
                         color: "#fff",
+
                     }}
                 >
                     {title}

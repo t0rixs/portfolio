@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FadeInFromLeft } from "../shared/components";
 import Theme_ico from "./Theme_ico";
+import PressList from "./PressList";
 
 export default function Aboutme() {
     const navigate = useNavigate();
@@ -74,7 +75,9 @@ export default function Aboutme() {
                 <section id="aboutme" style={{ scrollMarginTop: 'var(--nav-height)', display: 'flex', flexDirection: 'column', gap: '4rem' }}>
                     <motion.div className="overview">
                         <FadeInFromLeft>
-                            <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', borderBottom: '1px solid currentColor', paddingBottom: '0.5rem', display: 'inline-block' }}>Overview</h2>
+                            <h2 style={{ fontSize: '3rem', marginBottom: '3rem', fontWeight: '200', letterSpacing: '0.1em' }}>
+                                <span style={{ borderBottom: '1px solid #fff', paddingBottom: '0.5rem' }}>Overview</span>
+                            </h2>
                         </FadeInFromLeft>
                         <FadeInFromLeft>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '2rem' }}>
@@ -110,7 +113,9 @@ export default function Aboutme() {
 
                     <div className="themes">
                         <FadeInFromLeft>
-                            <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', borderBottom: '1px solid currentColor', paddingBottom: '0.5rem', display: 'inline-block' }}>Main Themes</h2>
+                            <h2 style={{ fontSize: '3rem', marginBottom: '3rem', fontWeight: '200', letterSpacing: '0.1em' }}>
+                                <span style={{ borderBottom: '1px solid #fff', paddingBottom: '0.5rem' }}>Main Themes</span>
+                            </h2>
                         </FadeInFromLeft>
                         <FadeInFromLeft>
                             <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'space-between' }}>
@@ -118,6 +123,14 @@ export default function Aboutme() {
                                 <Theme_ico id="act" title="Activity" description="活動" onClick={() => { navigate('/act') }} />
                             </div>
                         </FadeInFromLeft>
+                    </div>
+                    <div id="history">
+                        <FadeInFromLeft>
+                            <h2 style={{ fontSize: '3rem', marginBottom: '3rem', fontWeight: '200', letterSpacing: '0.1em' }}>
+                                <span style={{ borderBottom: '1px solid #fff', paddingBottom: '0.5rem' }}>HISTORY</span>
+                            </h2>
+                        </FadeInFromLeft>
+                        <PressList />
                     </div>
 
                 </section>
