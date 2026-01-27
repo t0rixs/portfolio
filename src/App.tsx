@@ -29,17 +29,21 @@ function AnimatedRoutes() {
 
   return (
     <>
-      <Background />
-      <ScrollTo />
-      <Header location={location.pathname} />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/tech" element={<Tech />} />
-          <Route path="/act" element={<Activity />} />
-          <Route path="/" element={<Aboutme />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </AnimatePresence>
+      <div style={{
+        color: 'black'
+      }}>
+        <Background />
+        <ScrollTo />
+        <Header location={location.pathname} />
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/tech" element={<Tech />} />
+            <Route path="/act" element={<Activity />} />
+            <Route path="/" element={<Aboutme />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
+      </div>
     </>
   );
 }
