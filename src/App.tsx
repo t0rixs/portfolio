@@ -30,7 +30,7 @@ function AnimatedRoutes() {
   return (
     <>
       <div style={{
-        color: 'black'
+        color: 'white'
       }}>
         <Background />
         <ScrollTo />
